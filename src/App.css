@@ -39,6 +39,13 @@ body {
   font-weight: 300;
   background: var(--gris-1);
 }
+img.izquierda {
+  float: left;
+}
+
+img.derecha {
+  float: right;
+}
 
 .bg-negro { background: var(--negro) }
 .bg-gris-1 { background: var(--gris-1) }

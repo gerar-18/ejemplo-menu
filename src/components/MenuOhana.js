@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../img/Menus/Ohana/logo.png';
+//import logoa from '../img/Menus/Burreria/logo.png';
 import crepaDulce from '../img/Menus/Ohana/crepaDulce.jpg';
 import crepaSalada from '../img/Menus/Ohana/crepaSalada.jpg';
 import waffles from '../img/Menus/Ohana/waffles.jpg';
