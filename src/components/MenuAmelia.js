@@ -690,6 +690,14 @@ export const MenuAmelia = () => {
                     <div className="col-10 m-0 p-1"><p className="m-0 p-0">Media orden de aguacate</p></div>
                     <div className="col-2 m-0 p-1"><p className="m-0 p-0">$10</p></div>
                 </div>
+                <h1 className="text-center mt-5 mb-3"><span className="texto-naranja-degradado font-weight-bold">Ubicación</span></h1>
+                <div className="embed-responsive embed-responsive-16by9 mb-5">
+                    <iframe title="Mapa"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234.9352184350617!2d-99.01010475827024!3d19.586064572955042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ee2a332809a3%3A0xaea5768d2ebc3211!2sCocina!5e0!3m2!1ses!2smx!4v1599084963695!5m2!1ses!2smx"
+                        width="600" height="450" frameborder="0" style={{ border: 0 }}
+                        allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
+                </div>
             </div>
         </section>
     )
