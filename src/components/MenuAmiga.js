@@ -5,13 +5,13 @@ import postre from '../img/Menus/Amiga/postre.jpg';
 import desayuno from '../img/Menus/Amiga/desayuno.jpeg';
 import carta from '../img/Menus/Amiga/carta.jpg';
 import taco from '../img/Menus/Amiga/taco.jpg';
+import { Encabezado } from "./encabezado";
 
 export const MenuAmiga = () => {
 
     return (
         <section>
-            <h1 className="text-center"><font color="white">COCINA AMIGA</font></h1>
-            <img src={logo} width="300" height="300" className="rounded mx-auto d-block mt-4 mb-3" alt="logo" loading="lazy" />
+            <Encabezado titulo="COCINA AMIGA" logo={logo}/>
             <div className="container text-light">
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">MENÚ DEL DÍA</span></h1>
                 <h4 className="text-center">INCLUYE:</h4>

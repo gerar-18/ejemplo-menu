@@ -3,365 +3,182 @@ import logo from '../img/Menus/Amelia/logo.png';
 import desayuno from '../img/Menus/Amelia/desayuno.jpeg';
 import omelette from '../img/Menus/Amelia/omelette.jpg';
 import chilaquiles from '../img/Menus/Amelia/chilaquiles.jpg';
-import enchiladas from '../img/Menus/Amelia/enchiladas.jpg';
-import molletes from '../img/Menus/Amelia/molletes.jpg';
+import enchilada from '../img/Menus/Amelia/enchiladas.jpg';
+import mollete from '../img/Menus/Amelia/molletes.jpg';
 import sincronizada from '../img/Menus/Amelia/sincronizada.jpg';
-import hotcakes from '../img/Menus/Amelia/hotcakes.jpg';
+import hotcake from '../img/Menus/Amelia/hotcakes.jpg';
 import sandwich from '../img/Menus/Amelia/sandwich.jpg';
 import pan from '../img/Menus/Amelia/pan.jpeg';
-import bebidas from '../img/Menus/Amelia/bebidas.png';
-import frutas from '../img/Menus/Amelia/frutas.jpg';
-import ensaladas from '../img/Menus/Amelia/ensaladas.jpeg';
+import bebida from '../img/Menus/Amelia/bebidas.png';
+import fruta from '../img/Menus/Amelia/frutas.jpg';
+import ensalada from '../img/Menus/Amelia/ensaladas.jpeg';
 import comidaCorrida from '../img/Menus/Amelia/comidaCorrida.jpeg';
 import jarra from '../img/Menus/Amelia/jarra.jpg';
 import comidaCarta from '../img/Menus/Amelia/comidaCarta.jpeg';
-import postres from '../img/Menus/Amelia/postres.jpg';
+import postre from '../img/Menus/Amelia/postres.jpg';
 import pozole from '../img/Menus/Amelia/pozole.jpg'
 import pancita from '../img/Menus/Amelia/pancita.jpg';
+import { Encabezado } from "./encabezado";
+import { Seccion } from "./seccion";
+import { Mapa } from "./mapa";
 
 export const MenuAmelia = () => {
-
+    const huevos = [
+        { nombre: "Huevos Revueltos, en Torta ó Estrellados" , precio: 65 },
+        { nombre: "Huevos con Frijoles" , precio: 65 },
+        { nombre: "Huevos Divorciados (Dos huevos estrellados, uno bañado en salsa verde y otro en salsa roja, con frijoles refritos)" , precio: 65 },
+        { nombre: "Huevos Albañil (Huevo bañado en salsa verde con frijoles refritos)" , precio: 65 },
+        { nombre: "Frijoles con Chorizo" , precio: 65 },
+        { nombre: "Huevo con Tocino, Revuelto o Americano" , precio: 65 },
+        { nombre: "Huevos Rancheros (Sobre tortilla de maíz con frijoles y salsa ranchera)" , precio: 65 },
+        { nombre: "Huevos con Nopal Asado (Dos huevos Estrellados sobre un Nopal Asado)" , precio: 50 },
+        { nombre: "Huevos con Salchicha" , precio: 65 },
+        { nombre: "Huevos con Jamon" , precio: 65 },
+        { nombre: "Huevos con Chorizo" , precio: 65 },
+        { nombre: "Huevos a la Mexicana" , precio: 65 },
+        { nombre: "Huevos en tres salsas (Salsa verde, roja y morita)" , precio: 65 },
+        { nombre: "Tacos dorador de Pollo o Zanahoria con Queso" , precio: 65 }
+    ];
+    const omelettes = [
+        { nombre: "Ommelet de un ingrediente (Jamón, Espinacas, Queso, Champiñon, Salchicha Ó chorizo)" , precio: 70 },
+        { nombre: "Ommelet de dos Ingrediente (Jamón, Espinacas, Queso, Champiñon, Salchicha Ó chorizo)" , precio: 75 },
+        { nombre: "Omelette solo Claras de 1 ingrediente (Jamón, Espinacas, Queso, Champiñon, Salchicha Ó chorizo)" , precio: 75 },
+        { nombre: "Omelette solo Claras de 2 Ingredientes (Jamón, Espinacas, Queso, Champiñon, Salchicha Ó chorizo)" , precio: 80 },
+        { nombre: "Omelette con Pollo y Queso" , precio: 90 },
+        { nombre: "Omelette con Bistec y Queso" , precio: 90 }
+    ];
+    const chilaquilesVariados = [
+        { nombre: "Chilaquiles sencillos (Servidos con Frijoles refritos)" , precio: 65 },
+        { nombre: "Chilaquiles con Huevo (Dos Huevos estrellados, revueltos o en torta)" , precio: 75 },
+        { nombre: "Chilaquiles Combinados (Huevo con Jamon)(Salchicha)(a la Mexicana" , precio: 90 },
+        { nombre: "Chilaquiles con Bistec asado ó Pechuga desmenuzada" , precio: 80 },
+        { nombre: "Chilaquiles con Milanesa ó Pechuga Empanizada ó Asada" , precio: 90 },
+        { nombre: "Chilaquiles con Costilla" , precio: 90 },
+        { nombre: "Bistec Encebollado" , precio: 80 },
+        { nombre: "Costilla Asada" , precio: 85 },
+        { nombre: "Bistec a la Mexicana" , precio: 80 },
+        { nombre: "Fajitas de Pechuga ó Bistec (Encebollado ó a la Mexicana)" , precio: 80 },
+        { nombre: "Higado Encebollado" , precio: 65 },
+        { nombre: "Enfrijoladas de Huevo" , precio: 65 },
+        { nombre: "Enfrijoladas de Pollo" , precio: 65 },
+        { nombre: "Enfrijolada Extra" , precio: 20 }
+    ];
+    const enchiladas = [
+        { nombre: "ENCHILADAS VERDER, ROJAS Ó DE MOLE (Con pollo)" , precio: 65 },
+        { nombre: "ENCHILADAS DE GUAJILLO (queso, crema, pollo y lechuga)" , precio: 70 },
+        { nombre: "ENCHILADAS CON POLLO Y HUEVO AL GUSTO" , precio: 90 },
+        { nombre: "ENCHILADAS CON POLLO Y BISTEC Ó COSTILLA" , precio: 95 },
+        { nombre: "ENCHILADAS CON POLLO Y ARRACHERA" , precio: 130 },
+        { nombre: "GRATINADO DE QUESILLO" , precio: 20 },
+        { nombre: "Enchilada Extra" , precio: 65 }
+    ];
+    const molletes = [
+        { nombre: "Molletes (de Jamón, Salchicha ó Chorizo con Quesillo)" , precio: 65 },
+        { nombre: "Molletes (de Jamón, Salchicha ó Chorizo con Manchego)" , precio: 70 },
+        { nombre: "Mollete Extra con Quesillo" , precio: 70 },
+        { nombre: "Mollete extra con Manchego" , precio: 80 }
+    ];
+    const sincronizadas = [
+        { nombre: "Sincronizadas de Champiñones con Queso (tortilla de harina ó maiz)" , precio: 70 },
+        { nombre: "Sincronizadas de Jamón y Queso (tortilla de harina ó maiz)" , precio: 70 },
+        { nombre: "Sincronizadas de Queso (tortilla de harina ó maiz)" , precio: 65 },
+        { nombre: "Sincronizada Extra" , precio: 25 }
+    ];
+    const hotcakes = [
+        { nombre: "Hot Cakes (con mermelada, cajeta, miel y lechera)" , precio: 70 },
+        { nombre: "Hot Cakes (con platano y cajeta)" , precio: 75 },
+        { nombre: "Hot cakes Huevo con Jamón" , precio: 90 },
+        { nombre: "Hot Cake Extra" , precio: 20 },
+        { nombre: "Orden de Hot-Cakes SIN COMPLEMENTOS" , precio: 50 }
+    ];
+    const comidasCorrida = [
+        { nombre: "Comida Corrida (De Martes a Domingo a partir de la 1:00 pm. a 6:00 pm y con 3 guisados diferentes a elegir cada dia y siempre Tacos ó Enchiladas: Mole, Verde ó Rojas. Incluye: Sopa del dia o consome, arroz ó espaggueti, guisado a elegir, Jarra de agua y postre del dia)" , precio: 60 },
+        { nombre: "Huevo ó Platano Extra" , precio: 5 },
+        { nombre: "Consomé (Solo con Verdura)" , precio: 25 },
+        { nombre: "Consomé (Con verdura y pechuga deshebrada ó Pieza de Pollo)" , precio: 40 },
+        { nombre: "Sopa de Día" , precio: 20 },
+        { nombre: "Orden de Arroz" , precio: 20 },
+        { nombre: "Orden de Frijoles" , precio: 20 },
+        { nombre: "Papas a la Francesa" , precio: 25 },
+        { nombre: "TAZA DE CAFÉ O TÉ" , precio: 15 }
+    ];
+    const tortas = [
+        { nombre: "Torta (Jamón, salchicha, perina española, chorizo, queso ó huevo)" , precio: 35 },
+        { nombre: "Torta con dos Ingredientes (Jamón, salchicha, chorizo, queso ó huevo)" , precio: 40 },
+        { nombre: "Torta (Milanesa ó Pollo)" , precio: 45 },
+        { nombre: "Sandwich (Jamón, salchicha, choriz, queso ó huevo)" , precio: 30 },
+        { nombre: "Sandwich con dos Ingredientes (Jamón, salchicha, chorizo, queso ó huevo)" , precio: 35 },
+        { nombre: "Queso extra en la Torta o Sandwich" , precio: 5 }
+    ];
+    const panes = [
+        { nombre: "Pan con Mantequilla" , precio: 12 },
+        { nombre: "Pan de Dulce" , precio: 12 }
+    ];
+    const frutas = [
+        { nombre: "Plato de Fruta Chico (Melón, papaya y piña) de temporada" , precio: 30 },
+        { nombre: "Ingrediente adicional (Miel, granola ó yogurt)" , precio: 15 }
+    ];
+    const bebidas = [
+        { nombre: "Café Americano" , precio: 15 },
+        { nombre: "Café Soluble" , precio: 20 },
+        { nombre: "Café con leche" , precio: 20 },
+        { nombre: "Té (manzanilla, canela, hierbabuena, manzana-canela)" , precio: 20 },
+        { nombre: "Leche para Nescafe" , precio: 25 },
+        { nombre: "Vaso de leche fría ó caliente" , precio: 20 },
+        { nombre: "Chocolate frío ó caliente" , precio: 25 },
+        { nombre: "Licuado (Fresa, chocolate, platano y vainilla)" , precio: 30 },
+        { nombre: "Vaso de jugo grande (Naranja, naranja con papaya o jugo verde)" , precio: 25 },
+        { nombre: "Vaso de jugo chico (Naranja, naranja con papaya o jugo verde)" , precio: 20 }
+    ];
+    const ensaladas = [
+        { nombre: "Ensalada de Zanahoria (Zanahoria, lechuga, piña y espinaca)" , precio: 40 },
+        { nombre: "Ensalada Amelia (Espinaca, manzana, nuez, arandano y jamón)" , precio: 45 },
+        { nombre: "Orden de verduras al vapor" , precio: 35 },
+        { nombre: "Atún en pico de gallo con frijoles de la olla" , precio: 45 },
+        { nombre: "Extra (Pollo desmenuzado)" , precio: 25 },
+        { nombre: "Extra (Pechuga o bistec)" , precio: 70 }
+    ];
+    const jarras = [
+        { nombre: "Jarra de Agua del Día chica" , precio: 25 },
+        { nombre: "Jarra de Agua del Día Grande" , precio: 40 },
+        { nombre: "Agua Simple Embotellada" , precio: 12 },
+        { nombre: "Refresco" , precio: 18 }
+    ];
+    const postres = [
+        { nombre: "Platanos con crema" , precio: 25 },
+        { nombre: "Platanos Fritos" , precio: 35 }
+    ];
+    const pozoleSabados = [
+        { nombre: "Puerco ó Pollo" , precio: 70 }
+    ];
+    const pancitaComplementos = [
+        { nombre: "Pancita (Estilo durango, con maiz y chicharrón)" , precio: 70 },
+        { nombre: "Orden de crema" , precio: 15 },
+        { nombre: "Orden de aguacate" , precio: 20 },
+        { nombre: "Media orden de aguacate" , precio: 10 }
+    ];
     return (
         <section>
-            <h1 className="text-center"><font color="white">Cocina Amelia</font></h1>
-            <img src={logo} width="300" height="300" className="rounded mx-auto d-block mt-4 mb-3" alt="logo" loading="lazy" />
+            <Encabezado titulo="Cocina Amelia" logo={logo}/>
             <div className="container text-light">
                 <p className="text-center">El verdadero sabor del hogar</p>
                 <h3 className="text-center">MARTES A DOMINGO</h3>
                 <h4 className="text-center">9:00 am - 6:00 pm</h4>
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">DESAYUNOS COMPLETOS</span></h1>
                 <p className="text-center">(Incluye: Café o Té, 1pza. de pan dulce ó 1 Hotcake ó Fruta) Se sirven de 9:00 am. a 1:00 pm.</p>
-                <div className="card border-dark shadow">
-                    <img src={desayuno} className="card-img" alt="desayuno" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Huevos</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos Revueltos, en Torta ó Estrellados</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos con Frijoles</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos Divorciadoss</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">(Dos huevos estrellados, uno bañado en salsa verde y otro en salsa roja, con frijoles refritos)</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos Albañil (Huevo bañado en salsa verde con frijoles refritos)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Frijoles con Chorizo</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevo con Tocino, Revuelto o Americano</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos Rancheros (Sobre tortilla de maíz con frijoles y salsa ranchera)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos con Nopal Asado (Dos huevos Estrellados sobre un Nopal Asado)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos con Salchicha</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos con Jamon</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos con Chorizo</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos a la Mexicana</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevos en tres salsas (Salsa verde, roja y morita)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <br />
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Tacos dorador de Pollo o Zanahoria con Queso</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={omelette} className="card-img" alt="omelette" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Omeletts</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Ommelet de un ingrediente</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <p><small>(Jamón, Espinacas, Queso, Champiñon, Salchicha Ó chorizo)</small></p>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Ommelet de dos Ingredientes</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$75</p></div>
-                </div>
-                <p><small>(Jamón, Espinacas, Queso, Champiñon, Salchicha Ó chorizo)</small></p>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Omelette solo Claras de 1 ingrediente</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$75</p></div>
-                </div>
-                <p><small>(Jamón, Espinacas, Queso, Champiñon, Salchicha Ó chorizo)</small></p>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Omelette solo Claras de 2 Ingredientes</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$80</p></div>
-                </div>
-                <p><small>(Jamón, Espinacas, Queso, Champiñon, Salchicha Ó chorizo)</small></p>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Omelette con Pollo y Queso</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$90</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Omelette con Bistec y Queso </p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$90</p></div>
-                </div>
-                <br />
+                <Seccion menu={huevos} imagen={desayuno} titulo="Huevos" />
+                <Seccion menu={omelettes} imagen={omelette} titulo="Omeletts" />
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">DESAYUNOS AMELIA</span></h1>
                 <p className="text-center">(Incluye: Fruta, Café Americano o Té)</p>
-                <div className="card border-dark shadow">
-                    <img src={chilaquiles} className="card-img" alt="chilaquiles" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Chilaquiles</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Chilaquiles sencillos (Servidos con Frijoles refritos)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Chilaquiles con Huevo (Dos Huevos estrellados, revueltos o en torta)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$75</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Chilaquiles Combinados (Huevo con Jamon)(Salchicha)(a la Mexicana)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$90</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Chilaquiles con Bistec asado ó Pechuga desmenuzada</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$80</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Chilaquiles con Milanesa ó Pechuga Empanizada ó Asada</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$90</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Chilaquiles con Costilla</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$90</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Chilaquiles con Costilla</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$110</p></div>
-                </div>
-                <br />
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Bistec Encebollado</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$80</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Costilla Asada</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$85</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Bistec a la Mexicana</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$80</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Fajitas de Pechuga ó Bistec (Encebollado ó a la Mexicana)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$80</p></div>
-                </div>
-                <br />
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Higado Encebollado</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Enfrijoladas de Huevo</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Enfrijoladas de Pollo</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0"><em>Enfrijolada Extra</em></p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={enchiladas} className="card-img" alt="enchiladas" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Enchiladas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">ENCHILADAS VERDER, ROJAS Ó DE MOLE (Con pollo)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">ENCHILADAS DE GUAJILLO (queso, crema, pollo y lechuga)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">ENCHILADAS CON POLLO Y HUEVO AL GUSTO</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$90</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">ENCHILADAS CON POLLO Y BISTEC Ó COSTILLA</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$95</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">ENCHILADAS CON POLLO Y ARRACHERA</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$130</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">GRATINADO DE QUESILLO</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0"><em>Enchilada Extra</em> </p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={molletes} className="card-img" alt="molletes" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Molletes</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Molletes (de Jamón, Salchicha ó Chorizo con Quesillo)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Molletes (de Jamón, Salchicha ó Chorizo con Manchego)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Mollete Extra con Quesillo</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Mollete extra con Manchego</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$80</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={sincronizada} className="card-img" alt="sincronizada" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Sincronizadas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Sincronizadas de Champiñones con Queso <small>(tortilla de harina ó maiz)</small></p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Sincronizadas de Jamón y Queso <small>(tortilla de harina ó maiz)</small>)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Sincronizadas de Queso <small>(tortilla de harina ó maiz)</small></p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$65</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0"><em>Sincronizada Extra</em></p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$25</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={hotcakes} className="card-img" alt="hotcakes" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Hot-Cakes</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Hot Cakes <small>(con mermelada, cajeta, miel y lechera)</small></p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Hot Cakes <small>(con platano y cajeta)</small>)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$75</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Hot cakes Huevo con Jamón</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$90</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0"><em>Hot Cake Extra</em></p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <br />
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0"><strong>Orden de Hot-Cakes SIN COMPLEMENTOS</strong></p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$50</p></div>
-                </div>
-                <br />
+                <Seccion menu={chilaquilesVariados} imagen={chilaquiles} titulo="Chilaquiles" />
+                <Seccion menu={enchiladas} imagen={enchilada} titulo="Enchiladas" />
+                <Seccion menu={molletes} imagen={mollete} titulo="Molletes" />
+                <Seccion menu={sincronizadas} imagen={sincronizada} titulo="Sincronizadas" />
+                <Seccion menu={hotcakes} imagen={hotcake} titulo="Hot-Cakes" />
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">COMIDA CORRIDA & A LA CARTA</span></h1>
                 <p className="text-center">(De Martes a Domingo)</p>
-                <div className="card border-dark shadow">
-                    <img src={comidaCorrida} className="card-img" alt="comidaCorrida" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Comida Corrida</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">	Comida Corrida (De Martes a Domingo a partir de la 1:00 pm. a 6:00 pm y con 3 guisados diferentes a elegir cada dia y siempre Tacos ó Enchiladas: Mole, Verde ó Rojas.
-                    </p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$60</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Incluye: Sopa del dia o consome, arroz ó espaggueti, guisado a elegir, Jarra de agua y postre del dia)</p></div>
-                </div>
                 <p className="text-center">ESTA COMIDA SE PUEDE TERMINAR ANTES DEL TIEMPO SEÑALADO.</p>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Huevo ó Platano Extra </p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$5</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">POR $15 DISFRUTE DE UNA TAZA DE CAFÉ O TÉ</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Consomé (Solo con Verdura)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$25</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Consomé (Con verdura y pechuga deshebrada ó Pieza de Pollo)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$40</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Sopa de Día</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Orden de Arroz</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Orden de Frijoles</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Papas a la Francesa</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$25</p></div>
-                </div>
-                <br />
+                <Seccion menu={comidasCorrida} imagen={comidaCorrida} titulo="Comida Corrida" />
                 <div className="card border-dark shadow">
                     <img src={comidaCarta} className="card-img" alt="comidaCarta" loading="lazy" />
                     <div className="card-img-overlay m-0 p-0">
@@ -476,228 +293,20 @@ export const MenuAmelia = () => {
                 <p className="text-center"><strong><em>Por $25 más incluye consomé ó sopa, arros o espagueti, agua y postre.</em></strong></p>
                 <br />
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">TORTAS & SANDWICHES</span></h1>
-                <div className="card border-dark shadow">
-                    <img src={sandwich} className="card-img" alt="sandwich" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Tortas & Sandwiches</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Torta (Jamón, salchicha, perina española, chorizo, queso ó huevo)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$35</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Torta con dos Ingredientes (Jamón, salchicha, chorizo, queso ó huevo)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$40</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Torta (Milanesa ó Pollo)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Sandwich (Jamón, salchicha, choriz, queso ó huevo)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$30</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Sandwich con dos Ingredientes (Jamón, salchicha, chorizo, queso ó huevo)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$35</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0"><strong><em>Queso extra en la Torta o Sandwich</em></strong></p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$5</p></div>
-                </div>
+                <Seccion menu={tortas} imagen={sandwich} titulo="Tortas & Sandwiches" />
                 <p className="text-center"><strong><em>Nota: Por $25 más incluye pan ó fruta, cafe ó té.</em></strong></p>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={pan} className="card-img" alt="pan" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Pan</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Pan con Mantequilla</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$12</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Pan de Dulce</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$12</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={frutas} className="card-img" alt="frutas" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Frutas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Plato de Fruta Chico (Melón, papaya y piña) de temporada</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$30</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Ingrediente adicional (Miel, granola ó yogurt)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$15</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={bebidas} className="card-img" alt="bebidas" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Bebidas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Café Americano</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$15</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Café Soluble</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Café con leche</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Té (manzanilla, canela, hierbabuena, manzana-canela)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Leche para Nescafe</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$25</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Vaso de leche fría ó caliente</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Chocolate frío ó caliente</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$25</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Licuado (Fresa, chocolate, platano y vainilla)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$30</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Vaso de jugo grande (Naranja, naranja con papaya o jugo verde)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$25</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Vaso de jugo chico (Naranja, naranja con papaya o jugo verde)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <br />
+                <Seccion menu={panes} imagen={pan} titulo="Pan" />
+                <Seccion menu={frutas} imagen={fruta} titulo="Frutas" />
+                <Seccion menu={bebidas} imagen={bebida} titulo="Bebidas" />
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">ENSALADAS FRESCAS</span></h1>
-                <div className="card border-dark shadow">
-                    <img src={ensaladas} className="card-img" alt="ensaladas" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Ensaladas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Ensalada de Zanahoria (Zanahoria, lechuga, piña y espinaca)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$40</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Ensalada Amelia (Espinaca, manzana, nuez, arandano y jamón)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Orden de verduras al vapor</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$35</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Atún en pico de gallo con frijoles de la olla</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Extra (Pollo desmenuzado)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$25</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Extra (Pechuga o bistec)</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
+                <Seccion menu={ensaladas} imagen={ensalada} titulo="Ensaladas" />
                 <p className="text-center"><strong><em>Por $25 más incluye consomé ó sopa, arroz o espagueti, agua y postre.</em></strong></p>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={jarra} className="card-img" alt="jarra" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Bebidas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Jarra de Agua del Día chica</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$25</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Jarra de Agua del Día Grande</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$40</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Agua Simple Embotellada</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$12</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Refresco</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$18</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={postres} className="card-img" alt="postres" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Postres</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Platanos con crema</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$25</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Platanos Fritos</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$35</p></div>
-                </div>
+                <Seccion menu={jarras} imagen={jarra} titulo="Bebidas" />
+                <Seccion menu={postres} imagen={postre} titulo="Postres" />
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">SABADOS & DOMINGOS</span></h1>
-                <div className="card border-dark shadow">
-                    <img src={pozole} className="card-img" alt="pozole" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Pozole</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Puerco ó Pollo</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={pancita} className="card-img" alt="pancita" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Pancita</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0"><strong>Pancita (Estilo durango, con maiz y chicharrón)</strong></p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0"><strong>$70</strong></p></div>
-                </div>
-                <h6 className="text-center"><span className="texto-naranja-degradado font-weight-bold">Complementos</span></h6>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Orden de crema</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$15</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Orden de aguacate</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Media orden de aguacate</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$10</p></div>
-                </div>
-                <h1 className="text-center mt-5 mb-3"><span className="texto-naranja-degradado font-weight-bold">Ubicación</span></h1>
-                <div className="embed-responsive embed-responsive-16by9 mb-5">
-                    <iframe title="Mapa"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234.9352184350617!2d-99.01010475827024!3d19.586064572955042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ee2a332809a3%3A0xaea5768d2ebc3211!2sCocina!5e0!3m2!1ses!2smx!4v1599084963695!5m2!1ses!2smx"
-                        width="600" height="450" frameborder="0" style={{ border: 0 }}
-                        allowfullscreen="" aria-hidden="false" tabindex="0">
-                    </iframe>
-                </div>
+                <Seccion menu={pozoleSabados} imagen={pozole} titulo="Pozole" />
+                <Seccion menu={pancitaComplementos} imagen={pancita} titulo="Pancita & Complementos" />
+                <Mapa ubicacion="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234.9352184350617!2d-99.01010475827024!3d19.586064572955042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ee2a332809a3%3A0xaea5768d2ebc3211!2sCocina!5e0!3m2!1ses!2smx!4v1599084963695!5m2!1ses!2smx" />
             </div>
         </section>
     )

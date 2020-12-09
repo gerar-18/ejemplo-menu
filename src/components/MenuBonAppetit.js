@@ -1,83 +1,44 @@
 import React from 'react';
 import logo from '../img/Menus/BonAppetit/logo.png';
 import hamburguesa from '../img/Menus/BonAppetit/hamburguesa.jpeg';
-import sincronizadas from '../img/Menus/BonAppetit/sincronizadas.png'
+import sincronizada from '../img/Menus/BonAppetit/sincronizadas.png'
 import papas from '../img/Menus/BonAppetit/papas.jpg'
-import hotdogs from '../img/Menus/BonAppetit/hotdogs.jpeg'
-import enchiladas from '../img/Menus/BonAppetit/enchiladas.jpg'
+import hotdog from '../img/Menus/BonAppetit/hotdogs.jpeg'
+import enchilada from '../img/Menus/BonAppetit/enchiladas.jpg'
 import higiene from '../img/Menus/BonAppetit/higiene.png';
 import domicilio from '../img/Menus/BonAppetit/domicilio.png';
 import comunicar from '../img/Menus/BonAppetit/comunicar.png';
+import { Encabezado } from "./encabezado";
+import { Seccion } from "./seccion";
 
 export const MenuBonAppetit = () => {
-
+    const hamburguesas = [
+        { nombre: "Sencilla" , precio: 40 },
+        { nombre: "Hawaiana" , precio: 50 }
+    ];
+    const sincronizadas = [
+        { nombre: "Sincronizadas" , precio: 35 }
+    ];
+    const papasFrancesa = [
+        { nombre: "Papas a la francesa" , precio: 30 }
+    ];
+    const hotdogs = [
+        { nombre: "Hot dogs" , precio: 19 }
+    ];
+    const enchiladas = [
+        { nombre: "Enchiladas potosinas" , precio: 40 }
+    ];
     return (
         <section>
-            <h1 className="text-center"><font color="white">La Casa Bon Appetit</font></h1>
-            <img src={logo} width="300" height="300" className="rounded mx-auto d-block mt-4 mb-3" alt="logo" loading="lazy" />
+            <Encabezado titulo="La Casa Bon Appetit" logo={logo}/>
             <div className="container text-light">
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">Bienvenido</span></h1>
                 <h4 className="text-center">Consiente tu paladar probando nuestros deliciosos alimentos y para ese apetito feroz té ofrecemos:</h4>
-                <div className="card border-dark shadow">
-                    <img src={hamburguesa} className="card-img" alt="hamburguesa" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Hamburguesas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Sencilla</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$40</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Hawaiana</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$50</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={sincronizadas} className="card-img" alt="sincronizadas" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Sincronizadas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Sincronizadas</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$35</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={papas} className="card-img" alt="papas" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Papas a la francesa</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Papas a la francesa</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$30</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={hotdogs} className="card-img" alt="hotdogs" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Hot Dogs</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Hot dogs</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$19</p></div>
-                </div>
-                <br />
-                <div className="card border-dark shadow">
-                    <img src={enchiladas} className="card-img" alt="enchiladas" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Enchiladas potosinas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Enchiladas potosinas</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$40</p></div>
-                </div>
-                <br />
-                <br/>
+                <Seccion menu={hamburguesas} imagen={hamburguesa} titulo="Hamburguesas" />
+                <Seccion menu={sincronizadas} imagen={sincronizada} titulo="Sincronizadas" />
+                <Seccion menu={papasFrancesa} imagen={papas} titulo="Papas a la francesa" />
+                <Seccion menu={hotdogs} imagen={hotdog} titulo="Hot Dogs" />
+                <Seccion menu={enchiladas} imagen={enchilada} titulo="Enchiladas Potosinas" />
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">Preparados con productos de primera calidad e higiene</span></h1>
                 <img src={higiene} width="300" height="300" className="rounded mx-auto d-block mt-4 mb-3" alt="higiene" loading="lazy" />
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">Unicamente contamos con servicio a domicilio dentro del fraccionamiento sin costo adicional</span></h1>

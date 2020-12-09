@@ -5,161 +5,56 @@ import burritoSencillo from '../img/Menus/Burreria/burritoSencillo.jpg';
 import burritoChampi from '../img/Menus/Burreria/burritoChampi.jpeg';
 import combo from '../img/Menus/Burreria/combo.jpg';
 import promocion from "../img/Menus/Burreria/promocion.jpg";
+import { Encabezado } from "./encabezado";
+import { Seccion } from "./seccion";
 
 export const MenuBurreria = () => {
-
+    const burritosSencillos = [
+        { nombre: "Bistec" , precio: 45},
+        { nombre: "Longaniza" , precio: 45 },
+        { nombre: "Campechano" , precio: 45 },
+        { nombre: "Enchilada" , precio: 45 },
+        { nombre: "Al pastor" , precio: 45 },
+        { nombre: "Chuleta" , precio: 45 },
+        { nombre: "Pechuga" , precio: 45 }
+    ];
+    const burritosEspeciales = [
+        { nombre: "Arrachera" , precio: 55},
+        { nombre: "Chistorra" , precio: 50 },
+        { nombre: "Alambre" , precio: 50 },
+        { nombre: "Vegetariano (Champiñones, morron, cebolla y queso)" , precio: 60 },
+        { nombre: "Americano (Chistorra y arrachera)" , precio: 55 },
+        { nombre: "Jumbo (Bistec, longaniza, arrachera, pechuga, morron y cebollla)" , precio: 70 }
+    ];
+    const burritosChampis = [
+        { nombre: "Champi pollo" , precio: 60},
+        { nombre: "Champi bisteck" , precio: 60 },
+        { nombre: "Campechano" , precio: 45 }
+    ];
+    const combos = [
+        { nombre: "1 burrito, 1 papas y 1 refresco" , precio: 70},
+        { nombre: "Combo arrachera" , precio: 80 },
+        { nombre: "Combo americano" , precio: 80 },
+        { nombre: "Combo champipollo" , precio: 85 },
+        { nombre: "Combo alambre" , precio: 75 }
+    ];
+    const promociones = [
+        { nombre: "Diaria: 2 burritos al pastor" , precio: 60},
+        { nombre: "Lunes: 3 tortas" , precio: 75 },
+        { nombre: "Martes: 2 burros de pastor y 1 de arrachera" , precio: 105 },
+        { nombre: "Jueves: 6 tacos y 1 refresco de 2 listros" , precio: 105 }
+    ];
     return (
         <section>
-            <img src={logo} width="500" height="300" className="rounded mx-auto d-block mt-4 mb-3" alt="logo" loading="lazy" />
-            <br />
+            <Encabezado titulo="Burreria" logo={logo}/>
             <div className="container text-light">
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">Menú</span></h1>
                 <p className="text-center">Burritos, tacos y tortas...</p>
-                <div className="card border-dark shadow">
-                    <img src={burritoSencillo} className="card-img" alt="burritoSencillo" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Burritos Sencillos</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Bistec</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1" ><p className="m-0 p-0">Longaniza</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Campechano</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Enchilada</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Al pastor</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Chuleta</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Pechuga</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <br/>
-                <div className="card border-dark shadow">
-                    <img src={burritoEspecial} className="card-img" alt="burritoEspecial" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Burritos Especiales</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-0"><p className="m-0 p-0">Arrachera</p></div>
-                    <div className="col-2   m-0 p-0"><p className="m-0 p-0">$55</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-0"><p className="m-0 p-0">Chistorra</p></div>
-                    <div className="col-2  m-0 p-0"><p className="m-0 p-0">$50</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-0"><p className="m-0 p-0">Alambre</p></div>
-                    <div className="col-2  m-0 p-0"><p className="m-0 p-0">$50</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-0"><p className="m-0 p-0">Vegetariano</p></div>
-                    <div className="col-2  m-0 p-0"><p className="m-0 p-0">$60</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-0"><p className="m-0 p-0">(Champiñones, morron, cebolla y queso)</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-0"><p className="m-0 p-0">Americano</p></div>
-                    <div className="col-2  m-0 p-0"><p className="m-0 p-0">$55</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-0"><p className="m-0 p-0">(Chistorra y arrachera)</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-0"><p className="m-0 p-0">Jumbo</p></div>
-                    <div className="col-2  m-0 p-0"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-0"><p className="m-0 p-0">(Bistec, Longaniza, arrachera, pechuga, morron y cebolla)</p></div>
-                </div>
-                <br/>
-                <div className="card border-dark shadow">
-                    <img src={burritoChampi} className="card-img" alt="burritoChampi" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Burritos Champis</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-1"><p className="m-0 p-0">Champi pollo</p></div>
-                    <div className="col-2  m-0 p-1"><p className="m-0 p-0">$60</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-1"><p className="m-0 p-0">Champi bisteck</p></div>
-                    <div className="col-2  m-0 p-1"><p className="m-0 p-0">$60</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10  m-0 p-1"><p className="m-0 p-0">Campechano</p></div>
-                    <div className="col-2  m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <br/>
-                <div className="card border-dark shadow">
-                    <img src={combo} className="card-img" alt="Combo" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Combos</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">1 burrito, 1 papas y 1 refresco</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$70</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Combo arrachera</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$80</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Combo americano</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$80</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Combo champipollo</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$85</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Combo alambre</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$75</p></div>
-                </div>
-                <br/>
-                <div className="card border-dark shadow">
-                    <img src={promocion} className="card-img" alt="Combo" loading="lazy" />
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Promociones</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Diaria: 2 burritos al pastor</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$60</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Lunes: 3 tortas</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$75</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Martes: 2 burros de pastor y 1 de arrachera</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$105</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Jueves: 6 tacos, 1 refresco de 2 litros</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$105</p></div>
-                </div>
-                <br />
-                <br />
+                <Seccion menu={burritosSencillos} imagen={burritoSencillo} titulo="Burritos Sencillos" />
+                <Seccion menu={burritosEspeciales} imagen={burritoEspecial} titulo="Burritos Especiales" />
+                <Seccion menu={burritosChampis} imagen={burritoChampi} titulo="Burritos Champis" />
+                <Seccion menu={combos} imagen={combo} titulo="Combos" />
+                <Seccion menu={promociones} imagen={promocion} titulo="Promociones" />
             </div>
         </section>
     )

@@ -6,61 +6,48 @@ import waffles from '../img/Menus/Ohana/waffles.jpg';
 import postres from '../img/Menus/Ohana/postres.jpg';
 import bebidasFrias from '../img/Menus/Ohana/bebidasFrias.jpg';
 import bebidasCalientes from '../img/Menus/Ohana/bebidasCalientes.jpg';
+import { Encabezado } from "./encabezado";
+import { Seccion } from "./seccion";
+import { Mapa } from "./mapa";
+import { Contacto } from "./contacto";
 
 export const MenuOhana = () => {
-
+    const crepasDulces = [
+        { nombre: "Crepa con 1 ingrediente" , precio: 45 },
+        { nombre: "Crepa con 2 ingrediente" , precio: 50 },
+        { nombre: "Crepa con 3 ingrediente" , precio: 55 },
+        { nombre: "Crepa con 4 ingrediente" , precio: 60 }
+    ];
+    const productosWaffles = [
+        { nombre: "Waffles con 1 ingrediente" , precio: 35 },
+        { nombre: "Waffles con 2 ingrediente" , precio: 40 },
+        { nombre: "Waffles con 3 ingrediente" , precio: 45 },
+        { nombre: "Waffles con 4 ingrediente" , precio: 50 }
+    ];
+    const crepasSaladas = [
+        { nombre: "Jamon con queso" , precio: 45 },
+        { nombre: "Hawaiana" , precio: 50 },
+        { nombre: "Átun" , precio: 50 },
+        { nombre: "3 quesos" , precio: 50 }
+    ];
+    const productosPostre = [
+        { nombre: "Cubilete de queso" , precio: 20 },
+        { nombre: "Pay de limón" , precio: 30 },
+        { nombre: "Gelatina de mosaico" , precio: 30 },
+        { nombre: "Pastel de chocolate" , precio: 55 }
+    ];
+    const telefonos = ["7752058754", "7751252085"];
+    const linksFacebook = ["https://es.reactjs.org/docs/faq-functions.html"];
+    const linksInstagram = ["https://www.w3schools.com/tags/tag_div.ASP"];
+    const linksTwitter = ["https://disenowebakus.net/enlaces-hipervinculos-tag-ancla-html.php"];
     return (
         <section>
-            <img src={logo} width="300" height="300"  className="rounded mx-auto d-block mt-4 mb-3" alt="logo" loading="lazy"/>
+            <Encabezado titulo="" logo={logo}/>
             <div className="container text-light">
                 <h1 className="text-center"><span className="texto-naranja-degradado font-weight-bold">Menú</span></h1>
                 <p className="text-center">Crepas, Waffles, Pasteles, Café y algo más...</p>
-                <div className="card border-dark shadow">
-                    <img src={crepaDulce} className="card-img" alt="Crepas Dulces" loading="lazy"/>
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Crepas Dulces</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Crepa con 1 ingrediente</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Crepa con 2 ingredientes</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$50</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Crepa con 3 ingredientes</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$55</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Crepa con 4 ingredientes</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$60</p></div>
-                </div>
-                <br/>
-                <div className="card border-dark shadow">
-                    <img src={waffles} className="card-img" alt="Waffles" loading="lazy"/>
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Waffles</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Waffles con 1 ingrediente</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$35</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Waffles con 2 ingredientes</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$40</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Waffles con 3 ingredientes</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Waffles con 4 ingredientes</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$50</p></div>
-                </div>
-                <br/>
+                <Seccion menu={crepasDulces} imagen={crepaDulce} titulo="Crepas dulces" />
+                <Seccion menu={productosWaffles} imagen={waffles} titulo="Waffles" />
                 <div className="dropdown-divider"></div>
                     <h3 className="text-center"><span className="texto-naranja-degradado font-weight-bold">Ingredientes</span></h3>
                     <div className="row m-0 p-0">
@@ -95,52 +82,8 @@ export const MenuOhana = () => {
                         </div>
                     </div>
                 <div className="dropdown-divider"></div>
-                <div className="card border-dark shadow">
-                    <img src={crepaSalada} className="card-img" alt="Crepas Salasas" loading="lazy"/>
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Crepas Saladas</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Jamón con queso</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$45</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Hawaiana</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$50</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Atún</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$50</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">3 quesos</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$50</p></div>
-                </div>
-                <br/>
-                <div className="card border-dark shadow">
-                    <img src={postres} className="card-img" alt="Postres" loading="lazy"/>
-                    <div className="card-img-overlay m-0 p-0">
-                        <h5 className="card-title text-center font-weight-bold p-3 bg-negro-alfa-75">Postres</h5>
-                    </div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Cubilete de queso</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$20</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Pay de limón</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$30</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Gelatina de mosaico</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$30</p></div>
-                </div>
-                <div className="row m-0 p-0">
-                    <div className="col-10 m-0 p-1"><p className="m-0 p-0">Pastel de chocolate</p></div>
-                    <div className="col-2 m-0 p-1"><p className="m-0 p-0">$55</p></div>
-                </div>
-                <br/>
+                <Seccion menu={crepasSaladas} imagen={crepaSalada} titulo="Crepas Saladas" />
+                <Seccion menu={productosPostre} imagen={postres} titulo="Postres" />
                 <div className="card border-dark shadow">
                     <img src={bebidasFrias} className="card-img" alt="Bebidas Frias" loading="lazy"/>
                     <div className="card-img-overlay m-0 p-0">
@@ -314,14 +257,8 @@ export const MenuOhana = () => {
                 </div>
                 <br/>
                 <p className="m-0 p-0">Por $5 cambia a leche deslactosada o leche deslactosada light.</p>
-                <h1 className="text-center mt-5 mb-3"><span className="texto-naranja-degradado font-weight-bold">Ubicación</span></h1>
-                <div className="embed-responsive embed-responsive-16by9 mb-5">
-                    <iframe
-                        title="Mapa"
-                        className="embed-responsive-item mx-auto"
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtaMxmFKRzS4x1iXQoSl_Zs61ZyQ3sIXo&q=Ohana+-+Crepes+%26+Coffee" allowFullScreen>
-                    </iframe>
-                </div>
+                <Contacto telefonos={telefonos} facebook={linksFacebook} twitter={linksTwitter} instagram={linksInstagram}/>
+                <Mapa ubicacion="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtaMxmFKRzS4x1iXQoSl_Zs61ZyQ3sIXo&q=Ohana+-+Crepes+%26+Coffee" />
             </div>
         </section>
     )
